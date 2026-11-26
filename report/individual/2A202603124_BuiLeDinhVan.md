@@ -7,8 +7,8 @@
 
 Ghi **trước** khi chạy `scripts/pp_sweep.py`, rồi commit và push ngay (lịch sử commit là bằng chứng thời điểm viết). Không sửa phần này sau khi có kết quả.
 
-- Tham số tôi nghĩ giảm công sửa nhiều nhất: <TU_DIEN_THAM_SO_BAN_DU_DOAN>
-- Vì sao (nhìn ảnh BEV tập A: box thừa nhiều hay box sót nhiều?): <TU_DIEN_LY_DO_CUA_BAN_DUA_TREN_ANH_BEV_VA_SO_DO_BASELINE>
+- Tham số tôi nghĩ giảm công sửa nhiều nhất: `score_thr=0.3` kết hợp `min_points=5`.
+- Vì sao (nhìn ảnh BEV tập A: box thừa nhiều hay box sót nhiều?): Quan sát ảnh BEV tập A và số đo baseline (97 box dự đoán so với 47 box thực tế, phải xóa 59 box thừa trong khi chỉ thêm 9 box sót), box thừa nhiễu xuất hiện nhiều hơn hẳn box bị sót nên việc tăng ngưỡng tin cậy `score_thr` lên `0.3` và lọc box ít điểm bằng `min_points=5` sẽ loại bỏ mạnh các dự đoán sai và giảm tổng công sửa.
 
 ## 2. Tập A: sửa tay và tune
 
