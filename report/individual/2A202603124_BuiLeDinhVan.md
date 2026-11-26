@@ -1,22 +1,20 @@
-# Báo cáo Day 14 — <Họ và tên> — <MSSV>
+# Báo cáo Day 14 — Bùi Lê Đình Văn — 2A202603124
 
-> Sao chép file này thành `report/individual/<MSSV>_<HoTen>.md` (không dấu), ví dụ `2A20260000_NguyenVanAn.md`.
-
-- Mã học viên dùng với `--student`: `<ID>`
-- `seed_tag` trong `frames_A.txt`: `<...>`
+- Mã học viên dùng với `--student`: `124`
+- `seed_tag` trong `frames_A.txt`: `393590736f`
 
 ## 1. Dự đoán trước sweep (bước 5b)
 
 Ghi **trước** khi chạy `scripts/pp_sweep.py`, rồi commit và push ngay (lịch sử commit là bằng chứng thời điểm viết). Không sửa phần này sau khi có kết quả.
 
-- Tham số tôi nghĩ giảm công sửa nhiều nhất: ...
-- Vì sao (nhìn ảnh BEV tập A: box thừa nhiều hay box sót nhiều?): ...
+- Tham số tôi nghĩ giảm công sửa nhiều nhất: <TU_DIEN_THAM_SO_BAN_DU_DOAN>
+- Vì sao (nhìn ảnh BEV tập A: box thừa nhiều hay box sót nhiều?): <TU_DIEN_LY_DO_CUA_BAN_DUA_TREN_ANH_BEV_VA_SO_DO_BASELINE>
 
 ## 2. Tập A: sửa tay và tune
 
 | Cấu hình | Xóa | Thêm | Sửa | Chi phí |
 |---|---:|---:|---:|---:|
-| Gốc | | | | |
+| Gốc | 59 | 9 | 17 | 35.2 |
 | `best_config.json` | | | | |
 
 - Tham số đã đổi trong `best_config.json`: ...
@@ -25,14 +23,14 @@ Ghi **trước** khi chạy `scripts/pp_sweep.py`, rồi commit và push ngay (l
 
 ## 3. Trước/sau (bước 8)
 
-![so sánh](../../d14_<ID>/compare/<frame>.jpg)
+![so sánh](../../d14_124/compare/<frame>.jpg)
 
 - `scripts/pp_compare.py` báo giảm (hoặc tăng) ...% công sửa trên tập A.
 - Dự đoán ở mục 1 đúng hay sai? Giải thích bằng số box xóa/thêm/sửa: ...
 
 ## 4. Tập B
 
-Số đo từ `scripts/pp_prelabel.py --frames d14_<ID>/frames_B.txt --config d14_<ID>/best_config.json --gt d14_<ID>/ref_B.json`:
+Số đo từ `scripts/pp_prelabel.py --frames d14_124/frames_B.txt --config d14_124/best_config.json --gt d14_124/ref_B.json`:
 
 | Xóa | Thêm | Sửa | Chi phí |
 |---:|---:|---:|---:|
